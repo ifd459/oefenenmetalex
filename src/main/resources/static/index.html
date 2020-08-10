@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FBI Checking In</title>
+    <script>
+        function getFruit() {
+            // console.log("log works");
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+
+                console.log("het werkt");
+                document.getElementById("getFruit").innerHTML = this.responseText;
+
+            }
+            xhr.open("GET", "http://localhost:8080/api/fruit/mango", true);
+            xhr.send();
+        }
+    </script>
+</head>
+
+
+<body>
+<h1>This is the internet calling</h1>
+<p>jokes, it's aliens</p>
+<p>oh my god they stole my kidneys</p>
+<p>OH MY GOD</p>
+<button onclick="getFruit()">klik hier</button>
+<div id="getFruit"></div>
+</body>
+</html>
