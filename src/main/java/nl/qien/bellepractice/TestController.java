@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
         @GetMapping("/all")
         public String getTest() {
-            throw new NullPointerException();
+//            throw new NullPointerException();
+            return "aliens! run!";
         }
 
         @PostMapping("/add")
